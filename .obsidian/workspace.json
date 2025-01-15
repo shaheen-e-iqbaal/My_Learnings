@@ -1,0 +1,196 @@
+{
+  "main": {
+    "id": "d82eb4e00fa75f06",
+    "type": "split",
+    "children": [
+      {
+        "id": "acb30f2228205db5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82cd2b1306beecad",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2c2d3a584694955a",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ad71e251b23eea1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "afbf0d1dfa18f739",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "8248dead1e45573c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "5aed36c30431a5f8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "0c29ad3d01f251c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "f805c927a5b325d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38c741b6892fd144",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Java Learning/Collection Framework.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Collection Framework"
+            }
+          },
+          {
+            "id": "899f21c0b616cbe8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Java Learning/Collection Framework.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Collection Framework"
+            }
+          },
+          {
+            "id": "2d291267ac4ffb3f",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "ba58ffd62d0c2406",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Java Learning/Collection Framework.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Collection Framework"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "afbf0d1dfa18f739",
+  "lastOpenFiles": [
+    "Java Learning/Optional Class.md",
+    "Cartoon network/Multiple Access Protocol.md",
+    "Java Learning/Stream() API.md",
+    "Java Learning/General Learning.md",
+    "Java Learning/Collection Framework.md",
+    "Java Learning/Reflection.md",
+    "Java Learning/File System In Java.md",
+    "Java Learning/Exception Handling.md",
+    "Multithreading in Java/Process Vs Thread.md",
+    "Java Learning/Default & Static Methods in Interfaces.md",
+    "Java Learning/Enums in Java.md",
+    "Java Learning/Arrays.asList, toArray().md",
+    "Java Learning/Serialization & Deserialization.md",
+    "Multithreading in Java",
+    "Cartoon network/Each OSI Layer and Their Protocols.md",
+    "Cartoon network/IPV4 and Subnetting.md",
+    "Java Learning/Memory Management by JVM.md",
+    "Java Learning/Garbage Collection.md",
+    "Java Learning/Functional Interface and Lambda  Expression.md",
+    "Java Learning/Types of Referencing (Strong, Weak, Soft).md",
+    "Java Learning/How Java Program Runs.md",
+    "Cartoon network/Error detection & correction.md",
+    "Cartoon network/Routing Algorithms.md",
+    "Cartoon network/How Actually a Routing works.md",
+    "Cartoon network/Resources (Video + article) of CN.md",
+    "Cartoon network/HTTP vs HTTPS + TLS.md",
+    "Cartoon network/Devices used in CN.md",
+    "Cartoon network",
+    "Java Learning",
+    "SQL & DBMS learning",
+    "spring learning",
+    "Untitled.canvas"
+  ]
+}
