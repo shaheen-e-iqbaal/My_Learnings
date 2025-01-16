@@ -85,18 +85,27 @@
     "type": "split",
     "children": [
       {
-        "id": "acb30f2228205db5",
+        "id": "6278efe0208fa09e",
         "type": "tabs",
         "children": [
           {
+<<<<<<< HEAD
             "id": "82cd2b1306beecad",
 >>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
+=======
+            "id": "e8c12a23d9754f63",
+>>>>>>> 44c1b3e85f49e7014d5e75289cb210683307ae83
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Java Learning/Optional Class.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Optional Class"
             }
           }
 <<<<<<< HEAD
@@ -310,6 +319,7 @@
     }
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   "active": "7e0a51b2dd67b3c4",
   "lastOpenFiles": [
     "SQL & DBMS learning/normalisation.md",
@@ -350,34 +360,37 @@
     "My_Learnings/Python Learning"
 =======
   "active": "afbf0d1dfa18f739",
+=======
+  "active": "e8c12a23d9754f63",
+>>>>>>> 44c1b3e85f49e7014d5e75289cb210683307ae83
   "lastOpenFiles": [
+    "Java Learning/Memory Management by JVM.md",
     "Java Learning/Optional Class.md",
+    "Java Learning/Singleton Class.md",
+    "Cartoon network/IPV4 and Subnetting.md",
+    "Java Learning/File System In Java.md",
+    "Java Learning/Serialization & Deserialization.md",
+    "Java Learning/How Java Program Runs.md",
     "Cartoon network/Multiple Access Protocol.md",
     "Java Learning/Stream() API.md",
     "Java Learning/General Learning.md",
     "Java Learning/Collection Framework.md",
     "Java Learning/Reflection.md",
-    "Java Learning/File System In Java.md",
     "Java Learning/Exception Handling.md",
     "Multithreading in Java/Process Vs Thread.md",
     "Java Learning/Default & Static Methods in Interfaces.md",
     "Java Learning/Enums in Java.md",
     "Java Learning/Arrays.asList, toArray().md",
-    "Java Learning/Serialization & Deserialization.md",
     "Multithreading in Java",
     "Cartoon network/Each OSI Layer and Their Protocols.md",
-    "Cartoon network/IPV4 and Subnetting.md",
-    "Java Learning/Memory Management by JVM.md",
     "Java Learning/Garbage Collection.md",
     "Java Learning/Functional Interface and Lambda  Expression.md",
     "Java Learning/Types of Referencing (Strong, Weak, Soft).md",
-    "Java Learning/How Java Program Runs.md",
     "Cartoon network/Error detection & correction.md",
     "Cartoon network/Routing Algorithms.md",
     "Cartoon network/How Actually a Routing works.md",
     "Cartoon network/Resources (Video + article) of CN.md",
     "Cartoon network/HTTP vs HTTPS + TLS.md",
-    "Cartoon network/Devices used in CN.md",
     "Cartoon network",
     "Java Learning",
     "SQL & DBMS learning",
