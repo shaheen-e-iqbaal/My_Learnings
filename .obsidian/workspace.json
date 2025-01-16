@@ -1,5 +1,6 @@
 {
   "main": {
+<<<<<<< HEAD
     "id": "0ebe47b3bf06644b",
     "type": "split",
     "children": [
@@ -79,6 +80,17 @@
           },
           {
             "id": "36761fa341b3d40f",
+=======
+    "id": "d82eb4e00fa75f06",
+    "type": "split",
+    "children": [
+      {
+        "id": "acb30f2228205db5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "82cd2b1306beecad",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -87,13 +99,18 @@
               "title": "New tab"
             }
           }
+<<<<<<< HEAD
         ],
         "currentTab": 5
+=======
+        ]
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
       }
     ],
     "direction": "vertical"
   },
   "left": {
+<<<<<<< HEAD
     "id": "f66a38055e75604c",
     "type": "split",
     "children": [
@@ -103,6 +120,17 @@
         "children": [
           {
             "id": "7e0a51b2dd67b3c4",
+=======
+    "id": "2c2d3a584694955a",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ad71e251b23eea1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "afbf0d1dfa18f739",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -114,7 +142,11 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "7ea5f0cfa0368e04",
+=======
+            "id": "8248dead1e45573c",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "search",
@@ -131,7 +163,11 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "07b6bb64ee7cb4e1",
+=======
+            "id": "5aed36c30431a5f8",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -147,6 +183,7 @@
     "width": 300
   },
   "right": {
+<<<<<<< HEAD
     "id": "f8643c5ed631c4dd",
     "type": "split",
     "children": [
@@ -156,10 +193,25 @@
         "children": [
           {
             "id": "8becbab069c6b106",
+=======
+    "id": "0c29ad3d01f251c7",
+    "type": "split",
+    "children": [
+      {
+        "id": "f805c927a5b325d8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38c741b6892fd144",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "Java Learning/Collection Framework.md",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,24 +221,44 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
+<<<<<<< HEAD
               "title": "Backlinks"
             }
           },
           {
             "id": "1b69bc5be088df58",
+=======
+              "title": "Backlinks for Collection Framework"
+            }
+          },
+          {
+            "id": "899f21c0b616cbe8",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
+<<<<<<< HEAD
+=======
+                "file": "Java Learning/Collection Framework.md",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
+<<<<<<< HEAD
               "title": "Outgoing links"
             }
           },
           {
             "id": "aaf4e41241c4ff9b",
+=======
+              "title": "Outgoing links from Collection Framework"
+            }
+          },
+          {
+            "id": "2d291267ac4ffb3f",
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -199,6 +271,7 @@
             }
           },
           {
+<<<<<<< HEAD
             "id": "f54cea8a4df929cd",
             "type": "leaf",
             "state": {
@@ -206,6 +279,17 @@
               "state": {},
               "icon": "lucide-list",
               "title": "Outline"
+=======
+            "id": "ba58ffd62d0c2406",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Java Learning/Collection Framework.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Collection Framework"
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
             }
           }
         ]
@@ -225,6 +309,7 @@
       "command-palette:Open command palette": false
     }
   },
+<<<<<<< HEAD
   "active": "7e0a51b2dd67b3c4",
   "lastOpenFiles": [
     "SQL & DBMS learning/normalisation.md",
@@ -263,5 +348,41 @@
     "My_Learnings/Java Learning",
     "My_Learnings/Multithreading in Java",
     "My_Learnings/Python Learning"
+=======
+  "active": "afbf0d1dfa18f739",
+  "lastOpenFiles": [
+    "Java Learning/Optional Class.md",
+    "Cartoon network/Multiple Access Protocol.md",
+    "Java Learning/Stream() API.md",
+    "Java Learning/General Learning.md",
+    "Java Learning/Collection Framework.md",
+    "Java Learning/Reflection.md",
+    "Java Learning/File System In Java.md",
+    "Java Learning/Exception Handling.md",
+    "Multithreading in Java/Process Vs Thread.md",
+    "Java Learning/Default & Static Methods in Interfaces.md",
+    "Java Learning/Enums in Java.md",
+    "Java Learning/Arrays.asList, toArray().md",
+    "Java Learning/Serialization & Deserialization.md",
+    "Multithreading in Java",
+    "Cartoon network/Each OSI Layer and Their Protocols.md",
+    "Cartoon network/IPV4 and Subnetting.md",
+    "Java Learning/Memory Management by JVM.md",
+    "Java Learning/Garbage Collection.md",
+    "Java Learning/Functional Interface and Lambda  Expression.md",
+    "Java Learning/Types of Referencing (Strong, Weak, Soft).md",
+    "Java Learning/How Java Program Runs.md",
+    "Cartoon network/Error detection & correction.md",
+    "Cartoon network/Routing Algorithms.md",
+    "Cartoon network/How Actually a Routing works.md",
+    "Cartoon network/Resources (Video + article) of CN.md",
+    "Cartoon network/HTTP vs HTTPS + TLS.md",
+    "Cartoon network/Devices used in CN.md",
+    "Cartoon network",
+    "Java Learning",
+    "SQL & DBMS learning",
+    "spring learning",
+    "Untitled.canvas"
+>>>>>>> c5ec38b141c65d5b3d5b0c4e7b3e370f2025ee3e
   ]
 }
