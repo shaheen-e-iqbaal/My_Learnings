@@ -136,12 +136,13 @@ The primary difference between `stream()` and `parallelStream()` lies in **how t
 6. `findFirst() : Returns the first element in the stream.returns Optional<T>.`
 7. `findAny() : Returns any element from the stream (useful in parallel streams).`
 8. `count() : Counts the number of elements in the stream. returns long.`
-9. `anyMatch(Predicate<T>) : Checks if any element matches a condition.`
-10. `allMatch(Predicate<T>) : Checks if all elements match a condition.`
-11. `noneMatch(Predicate<T>) : Checks if no elements match a condition.`
-12. `max(Comparator<T>) : Finds the maximum element based on a comparator. it returns Optional<T>`
-13. `min(Comparator<T>) : Finds the minimum element based on a comparator. it returns Optional<T>`
-14. `reduce(seed, (acc, i) -> {}) : it reduces the stream and stores result in acc. seed represents the starting value of acc and i represent elements of stream.`
+9. ==`sum() : Returns the sum of elements of stream. it can only be applied to IntStream.`==
+10. `anyMatch(Predicate<T>) : Checks if any element matches a condition.`
+11. `allMatch(Predicate<T>) : Checks if all elements match a condition.`
+12. `noneMatch(Predicate<T>) : Checks if no elements match a condition.`
+13. `max(Comparator<T>) : Finds the maximum element based on a comparator. it returns Optional<T>`
+14. `min(Comparator<T>) : Finds the minimum element based on a comparator. it returns Optional<T>`
+15. `reduce(seed, (acc, i) -> {}) : it reduces the stream and stores result in acc. seed represents the starting value of acc and i represent elements of stream.`
 
 ---
 
