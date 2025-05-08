@@ -1,5 +1,5 @@
 
-Features of Java 8 : Functional Interface, Lambda Expression, Stream API, Default and static methods inside Interface, Date Time API. 
+Features of Java 8 : Functional Interface, Lambda Expression, Stream API, Default and static methods inside Interface, forEach() method inside Iterable Interface, Date Time API. 
 
 -> Basically java 8 enabled functional programming through Stream API, Lambda Expression.
 

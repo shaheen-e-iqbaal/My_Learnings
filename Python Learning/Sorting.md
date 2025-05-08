@@ -8,3 +8,8 @@
 ex: result = sorted(persons, key = lambda person : person.age, reverse = False)
 
 above sorted function will sort the persons list using person.age in increasing order. if we make reverse = True then it will sort in decreasing order.
+
+
+-> we can over ride ______lt______ (less than) method inside our person class to specify sorting order.
+ex : def _____lt_____ (self, other): 
+		return self.age < other.age
