@@ -16,7 +16,7 @@ toArray() :
 2. it returns Object[].
 
 
-toArray(arr) :
+toArray(T[] arr) :
 
 			List<Pair> pairs = new ArrayList<>();
 	Signature : Pair[] ans = pairs.toArray(ans);

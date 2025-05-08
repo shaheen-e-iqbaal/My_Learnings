@@ -31,7 +31,7 @@
 
 -> once a terminal operation is applied on a stream, that stream gets consumed, means, that stream can't be reused.
 
--> Intermediate operations are lazy, it means they will be applied once the terminal operation gets applied.
+-> Intermediate operations are lazy, it means they will be applied once the terminal operation gets applied. Intermediate operations returns new stream.
 
 -> parallelStream is faster than normal stream as it performs operations concurently.
 
@@ -148,10 +148,10 @@ The primary difference between `stream()` and `parallelStream()` lies in **how t
 
 ### **Specialized Stream Methods**
 
-1. ==`mapToInt(ToIntFunction<T>) : Maps elements to an IntStream==.`
+1. ==`mapToInt(ToIntFunction<T>) : Maps elements to an IntStream.`
 2. `mapToDouble(ToDoubleFunction<T>) : Maps elements to a DoubleStream.`
 3. `mapToLong(ToLongFunction<T>) : Maps elements to a LongStream.`
-4. ==`boxed() : Converts a primitive stream to a stream of objects==.`
+4. ==`boxed() : Converts a primitive stream to a stream of objects.`
 5. `parallel() : Converts a stream to a parallel stream.`
 
 
@@ -175,11 +175,11 @@ ans : Map<String, Double> ans = employees.stream().collect(Collectors.groupingBy
 
 ex : suppose we want to count sum of salary of employee of each department.
 
-ans: Map<String, Long> ans = employees.stream().collect(Collectors.groupingBy((Employee employee) -> employee.department, Collectors.summingToInt((Employee e) -> e.salary)));
+ans: Map<String, Long> ans = employees.stream().collect(Collectors.groupingBy((Employee employee) -> employee.department, Collectors.summingInt((Employee e) -> e.salary)));
 
 ex; suppose we want to count the number of employee in each department.
 
-ans : Map<String, Long> ans = employees.stream().collect(Collectors.groupingBy((Employee employee) -> employee.department, Collectors.summingToInt((Employee e) -> 1)));
+ans : Map<String, Long> ans = employees.stream().collect(Collectors.groupingBy((Employee employee) -> employee.department, Collectors.summingInt((Employee e) -> 1)));
 
 
 
@@ -206,7 +206,7 @@ Collectors.toMap() :
 
 ex: suppose we want to create map where key = department, value = sum of salary of employee of that department.
 
-ans : Map<String, Double> ans = employees.stream().collect(Collectors.toMap((Employee e) -> e.department, (Employee e) -> e.salary, (Integer oldValue, Integer newValue) -> oldValue + newValue, () -> new TreeMap<>()));
+ans : Map<String, Integer> ans = employees.stream().collect(Collectors.toMap((Employee e) -> e.department, (Employee e) -> e.salary, (Integer oldValue, Integer newValue) -> oldValue + newValue, () -> new TreeMap<>()));
 
 -> The first function is about specifying key.
 -> second is about specifying value for that key.
