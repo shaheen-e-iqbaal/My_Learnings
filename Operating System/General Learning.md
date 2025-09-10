@@ -2,7 +2,7 @@
 
 what is Linux and GNU/Linux :
 
--> Earlier there is one OS called UNIX which is developed by AT&T company which was paid. so due it's paid nature, the software engineer named Richard stallman felt bad. because he believed that OS like software should be free to make computer more affordable. so to provide free alternative to UNIX, he started Free Software Foundation, under which he and various other engineers contributed to build UNIX like OS called GNU. they developed almost all components of OS like shell, file system etc, but they were not able to develop kernel. so due to this the whole GNU project got stalled. after some time around in 1990's, a engineer named Linux Torvalds developed kernel named Linux which he made open source. which filled the gap of kernel in GNU project. so now the fully fledged GNU/Linux OS was ready which by time known as Linux OS.
+-> Earlier there is one OS called UNIX which is developed by AT&T company which was paid. so due to it's paid nature, the software engineer named Richard stallman felt bad. because he believed that OS like software should be free to make computer more affordable. so to provide free alternative to UNIX, he started Free Software Foundation, under which he and various other engineers contributed to build UNIX like OS called GNU. they developed almost all components of OS like shell, file system etc, but they were not able to develop kernel. so due to this the whole GNU project got stalled. after some time around in 1990's, a engineer named Linux Torvalds developed kernel named Linux which he made open source. which filled the gap of kernel in GNU project. so now the fully fledged GNU/Linux OS was ready which by time known as Linux OS.
 
 ### **What is GNU?**
 

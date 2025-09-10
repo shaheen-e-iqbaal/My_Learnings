@@ -1,4 +1,6 @@
 
+-> When we start running any java program, JVM request to OS to give some RAM memory to run that program. we can also ask OS to give some custom memory. now JVM will partition this allocated RAM memory in different portions like heap, metaspace etc. whenever new thread is created by program, it will allocate it's stack memory from this allocated RAM memory.
+
 
 1. Types of Memory allocated by JVM.
 	 1. Stack
@@ -10,7 +12,7 @@
 	     -> Young generation is also divided in three parts. Eden, S0, S1.
 	     -> young generation is small compared to old generation.
 	     -> GC operation in young generation(knows as minor GC) happens more frequently than in old generation.
-	 1. Metaspace
+	 3. Metaspace
 	     -> It stores information related to class like static variables etc.
 	     -> it is also garbage collectible.
 	     -> it is dynamic in size i.e. will increase it's size if required.

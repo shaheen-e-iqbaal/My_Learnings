@@ -3,17 +3,17 @@ run() -> This method get's called by start method. it contains all the logic we 
 
 start() -> This is method responsible to start a thread. it behind the scene calls the run method.
 
-sleep(t) -> This method makes a thread to sleep for a given time t. ==during this time, thread doesn't release a monitor lock.==
+sleep(t) -> This method makes a thread to sleep for a given time t. ==during this time, thread doesn't release a monitor lock. It is Thread class static method which throws checked exception.== 
 
-wait() -> this method makes thread to sleep until it is not waked up by notify() or notifyAll() method. ==during this time, it releases monitor lock.==
+wait() -> this method makes thread to sleep until it is not waked up by notify() or notifyAll() method. ==during this time, it releases monitor lock. it is Java.lang.Object class method not Thread class method.==
 
-notify() and notifyAll() -> this method wakes up a threads which are waiting on a same object. notify() will wake up any arbitrary thread waiting on this object and notifyAll() will wake up all thread waiting on this object.
+notify() and notifyAll() -> this method wakes up a threads which are waiting on a same object. notify() will wake up any arbitrary thread waiting on this object and notifyAll() will wake up all thread waiting on this object. These are Java.lang.Object class methods.
 
 interrupt() ->
 
 join() -> This method makes a thread to wait until the other thread doesn't gets finished. if we write t1.join() in main() function, main thread will wait for the t1 thread to get finished.
 
-yield() -> 
+yield() -> It is Thread class static method.
 
 setPriority() -> It is used to set priority of any thread. it is only hint to a Thread schedular. the default priority of a thread is equal to the priority of any thread which has created it. ex. the priority of main thread is 5. so any thread created by main thread will have priority = 5. to change default priority, this function is used.
 
@@ -118,3 +118,4 @@ Garbage collection thread is the example of Daemon thread. if we want to make an
         - Throws `IllegalThreadStateException` if called after the thread has been started.
 
 ---
+
