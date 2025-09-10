@@ -14,7 +14,7 @@ Class A :
 -> for each network, total possible host = 2^24
 -> host address x.0.0.0 is used as identifying address of that network. so it is not assigned to any host. similarly, address x.255.255.255.255 is used as broadcast address. so it is also not assigned to any host.
 -> so total number of useful host addresses in each network of class A = 2^24  - 2.
--> Default mast of class A is = 255.0.0.0.
+-> Default mask of class A is = 255.0.0.0.
 
 
 Class B :
@@ -26,7 +26,7 @@ Class B :
 -> for each network, total possible host = 2^16 
 -> host address x.y.0.0 is used as identifying address of that network. so it is not assigned to any host. similarly, address x.y.255.255 is used as broadcast address. so it is also not assigned to any host.
 -> so total number of useful host addresses in each network of class A = 2^16  - 2.
--> Default mast of class A is = 255.255.0.0.
+-> Default mask of class A is = 255.255.0.0.
 
 Class C :
 
@@ -37,7 +37,7 @@ Class C :
 -> for each network, total possible host = 2^8 
 -> host address x.y.z.0 is used as identifying address of that network. so it is not assigned to any host. similarly, address x.y.z.255 is used as broadcast address. so it is also not assigned to any host.
 -> so total number of useful host addresses in each network of class A = 2^8  - 2.
--> Default mast of class A is = 255.255.255.0.
+-> Default mask of class A is = 255.255.255.0.
 
 
 Class D :

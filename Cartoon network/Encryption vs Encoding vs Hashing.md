@@ -18,7 +18,7 @@ so major challenge of symmetric method is to securely transfer the private key o
 Ex : AES, DES uses Symmetric encryption.
 
 
-Asymmetric : in this method, the raw data is encrypted using the receivers public key and then receiver can decrypt is using it's private key. so for both encryption and decryption, only receivers keys are used.
+Asymmetric : in this method, the raw data is encrypted using the receivers public key and then receiver can decrypt it using it's private key. so for both encryption and decryption, only receivers keys are used.
 
 so no middle man can decrypt the data, because it doesn't have the private key of receiver.
 

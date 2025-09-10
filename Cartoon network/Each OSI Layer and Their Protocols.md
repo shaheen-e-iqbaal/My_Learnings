@@ -48,7 +48,7 @@ Devices : Router
 
 Protocols : IP, NAT (network address Translation), ARP (Address Resolution Protocol)
 
-In local network, all host gets a private IP addresses. so when any host try to communicate outside of the network, then upon receiving data to the router, it replaces  private IP address of Host with public IP address of it's own i.e. router which is assigned to it by ISP. so conversion of Private to public is done using NAT protocol. 
+In local network, all host gets a private IP addresses. so when any host try to communicate outside of the network, then upon receiving data by the router, it replaces  private IP address of Host with public IP address of it's own i.e. router which is assigned to it by ISP. so conversion of Private to public is done using NAT protocol. 
 
 so now data will traverse with source IP address as public IP address of router and destination IP address as IP address of Server.
 

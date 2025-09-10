@@ -33,5 +33,5 @@ in HTTP/1.1, each request requires a separate TCP connection unless **Keep-Aliv
 
 -> in HTTP/2, there is only one TCP connection between client and server. all requests and responses are transmitted on this single TCP connection. this is called multiplexing.
 
--> If we are use HTTP/1.1, then for each HTTP request new TCP connection will be created. so if user wants, then he can intentionally crash server by making too much HTTP requests. to solve this problem, Browser such as Chrome limits the maximum of 6 TCP connection between single client and server. these 6 TCP connection will be used to make request and response.
+-> If we are using HTTP/1.1, then for each HTTP request new TCP connection will be created. so if user wants, then he can intentionally crash server by making too much HTTP requests. to solve this problem, Browser such as Chrome limits the maximum of 6 TCP connection between single client and server. these 6 TCP connection will be used to make request and response.
 

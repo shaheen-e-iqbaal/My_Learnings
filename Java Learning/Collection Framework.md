@@ -63,6 +63,7 @@ Some methods of ArrayList:
 7. removeLast() : same as of pop_back() of C++.
 
 ==Java uses Array to implement the ArrayList.==
+-> Initial default capacity of ArrayList is 10.
 
 
 How to make ArrayList with some predefined values stored in it?
@@ -182,7 +183,8 @@ so after testing various values, Java founder decided to keep default load facto
 HashTable Internals : 
 
 -> It doesn't allow null key or null value.
--> It is synchronized.
+-> It is synchronized. 
+-> It provides thread safety but doesn't give good concurrency. 
 -> Bucket doesn't gets converted Into balanced BST like it occurs in HashMap.
 
 
@@ -225,7 +227,13 @@ ConcurrentHashMap Internals :
 -> it doesn't allow null as either key or value.
 
 
+==HashTable Vs ConcurrentHashMap :==
 
+==-> Both of them provide thread safety but ConcurrentHashMap provides good concurrency than HashTable.==
+
+==-> All methods of HashTable are synchronized i.e. only one thread at a time can access any method.==
+
+==-> But in ConcurrentHashMap, multiple threads can perform read and write operation, provided they are performing on different buckets (keys).== 
 
 
 
