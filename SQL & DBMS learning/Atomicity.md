@@ -49,7 +49,7 @@ How PostgreSQL uses WAL ?
 
 -> notice that till this time, the actual data file present in memory hasn't yet flushed to the disk. now suppose the db crashes. when it recovers, it will bring back all the log file in memory. now it will read that log file and will Redo the changes committed by T1. so this way WAL helps in ensuring durability.
 
--> now when will actual data file get flushed to the db? DBMS does this at some fixed interval of time. it will flush all the dirty data pages present in memory to disk. this process is called Checkpointing. note that, some page might have uncommitted changes as well. this changes will also get flushed. postgres uses MVCC. so for each tuple which has been updated, there will be separate tuple with different version. so postgres can decide which tuple version to keep based on the txn status which has created / modified it. 
+		-> now when will actual data file get flushed to the db? DBMS does this at some fixed interval of time. it will flush all the dirty data pages present in memory to disk. this process is called Checkpointing. note that, some page might have uncommitted changes as well. this changes will also get flushed. postgres uses MVCC. so for each tuple which has been updated, there will be separate tuple with different version. so postgres can decide which tuple version to keep based on the txn status which has created / modified it. 
 
 -> so in case of postgres, due to MVCC, it doesn't need to use anything for Undo. but for Redo, it uses WAL. 
 

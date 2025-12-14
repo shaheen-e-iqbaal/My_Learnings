@@ -42,3 +42,5 @@ OR
 
 Days day = Days.MONDAY;
 day.print();
+
+-> Enums can't be broken by Reflection. bcz when you do 

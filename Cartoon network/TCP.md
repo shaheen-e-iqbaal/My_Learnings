@@ -117,3 +117,6 @@ Receiver receives the packets with SEQ = 1, so it sends the ACK = 655, now it re
 -> During the TCP handshake, client and server both agree on the ISNs (initial sequence numbers), MSS (maximum segment size).
 
 
+-> [TCP header image.](https://share.google/images/vNIU9mJAIdIkZn7UM)
+-> [UDP header image](https://share.google/images/SEd9Sjmp9QuoSkZ6h)
+

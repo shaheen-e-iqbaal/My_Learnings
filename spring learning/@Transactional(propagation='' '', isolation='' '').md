@@ -152,3 +152,65 @@ public void updateData() {
 so in above code, when method throws exception of type CustomCheckedException or it's subclass type, rollback will happen. but won't happen for exception of type CustomIgnoredException or any of it's subclass.
 
 
+
+----------------------<<<<<<<<<<<<<<>>>>>>>>>---------------------------
+
+When we call transactional method(call should be intercepted by proxy), the proxy will intercept that method call. it will use the transactinal manager (if we have provided our own transaction manager like DataSourceTransactionManager then it will use that or will use the default one) to issue the call to underlying database to start the txn. after that proxy will call our underlying method. now when our method finishes, the transaction manager will issue the commit or rollback call to the db depending on our method threw any exception (default runtime exception) or not.
+-> one thing to notice is that, to create the bean of any PlatformTransactionManager, it is required to pass the Bean of DataSource.
+-> so the thing we can learn here is, do not mark any method Transactional unnecessary. because if we mark it, it will need PlatformTransactionManager to manage transaction lifecycle which eventually will keep hold the active database connection from connection pool like HikariCP.
+
+ChatGPT version of above note :
+```
+  ### How `@Transactional` really works in Spring
+
+ 1. **Proxy intercepts your method call**  
+    When you call a `@Transactional` method,you’re  not calling it directly.  
+    The call first goes through a Spring **proxy**  created by AOP.
+    
+ 2. **Proxy asks the Transaction Manager to start a transaction**
+    
+    - The proxy checks: "This method is transactional. Do we already have a transaction running?"
+        
+    - If not, it calls a `PlatformTransactionManager` (for JDBC this is usually `DataSourceTransactionManager`).
+        
+    - The transaction manager grabs a connection from HikariCP and sets it into **transaction mode** (autoCommit=false).
+        
+    - This binds the connection + transaction to the current thread.
+        
+ 3. **Your method runs**  
+    Now the proxy calls your actual method.
+    
+    - Inside, if you hit the repo layer, queries use the same DB connection bound to the transaction.
+        
+    - But the DB does **not commit yet**.
+        
+ 4. **Method finishes**
+    
+    - If no exception (or only checked exceptions): → Transaction manager calls `commit()` on the DB connection.
+        
+    - If a runtime exception (by default): → Transaction manager calls `rollback()`.
+        
+ 5. **Connection released**  
+    After commit/rollback, the connection is returned to HikariCP pool.
+    
+
+ ---
+
+ ### 🔹 Important points
+
+ - To create a `PlatformTransactionManager` bean,  Spring needs a **DataSource** bean.  
+    That’s why transactions are always tied to a database connection.
+    
+ - If you mark a method as `@Transactional` unnecessarily:
+    
+    - Spring will still create and manage a transaction.
+        
+    - That means:
+        
+        - One connection is taken from the pool and held until the method finishes.
+            
+        - Overhead of `BEGIN` + `COMMIT`/`ROLLBACK` calls to the DB.
+            
+
+ 👉 So best practice: **mark only those methods as `@Transactional` that really need transactional guarantees** (atomicity, rollback safety, multiple statements grouped together).
+```
