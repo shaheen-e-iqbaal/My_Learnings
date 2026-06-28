@@ -14,4 +14,4 @@ For `@Scheduled` methods, Spring uses its own scheduled task executor. By defaul
 In all these scenarios, since execution happens in a different thread, you must explicitly design for transaction boundaries, exception handling, and result retrieval if needed. 
 
 
-----------------------------<<<<<<<<<<<<<<>>>>>>>>>>>>>--------------------
+----------------------------<<<<<<<<<<<<<<>>>>>>>>>>>>>----------------

@@ -3,25 +3,49 @@ run() -> This method get's called by start method. it contains all the logic we 
 
 start() -> This is method responsible to start a thread. it behind the scene calls the run method.
 
-sleep(t) -> This method makes a thread to sleep for a given time t. ==during this time, thread doesn't release a monitor lock. It is Thread class static method which throws checked exception.== 
+sleep(t) -> This method makes a thread to sleep for a given time t. ==during this time, thread doesn't release a monitor lock. It is Thread class static method which throws checked 
+(`InterruptedException`)  exception.== 
 
-wait() -> this method makes thread to sleep until it is not waked up by notify() or notifyAll() method. ==during this time, it releases monitor lock. it is Java.lang.Object class method not Thread class method.==
+wait() -> this method makes thread to sleep until it is not waked up by notify() or notifyAll() method. ==during this time, it releases monitor lock. it is Java.lang.Object class method not Thread class method.== it throws checked 
+(`InterruptedException` ) exception. 
 
-notify() and notifyAll() -> this method wakes up a threads which are waiting on a same object. notify() will wake up any arbitrary thread waiting on this object and notifyAll() will wake up all thread waiting on this object. These are Java.lang.Object class methods.
+notify() and notifyAll() -> this method wakes up a threads which are waiting on a same object. notify() will wake up any arbitrary thread waiting on this object and notifyAll() will wake up all thread waiting on this object. ==These are Java.lang.Object class methods. this methods can only be called while holding that object's monitor lock.==
 
-interrupt() ->
+interrupt() -> it is instance method. it interrupts the thread.
 
-join() -> This method makes a thread to wait until the other thread doesn't gets finished. if we write t1.join() in main() function, main thread will wait for the t1 thread to get finished.
+join() -> it is instance method. This method makes a thread to wait until the other thread doesn't gets finished. if we write t1.join() in main() function, main thread will wait for the t1 thread to get finished. it throws checked 
+(`InterruptedException` ) exception.
 
 yield() -> It is Thread class static method.
 
-setPriority() -> It is used to set priority of any thread. it is only hint to a Thread schedular. the default priority of a thread is equal to the priority of any thread which has created it. ex. the priority of main thread is 5. so any thread created by main thread will have priority = 5. to change default priority, this function is used.
+setPriority() -> It is used to set priority of any thread. it is only hint to a Thread scheduler. the default priority of a thread is equal to the priority of any thread which has created it. ex. the priority of main thread is 5. so any thread created by main thread will have priority = 5. to change default priority, this function is used.
 
 setDaemon() -> Daemon threads are the ones which runs until any single non daemon thread is running. if all the non daemon threads gets finished, daemon thread will also get terminated regardless of they have completed their job or not.
 Garbage collection thread is the example of Daemon thread. if we want to make any thread Daemon, we can do using this method.
 
+State of Thread :
+
+1. Created : when you create Thread or it's child class object. the thread is said to be in created state.
+2. Runnable : when you call run() method on thread object, the thread is available to CPU to run it. now it depends on CPU scheduler to when to run it.
+3. Blocked : When thread is waiting to acquire monitor lock of some object (to enter into synchronized block/method), it is said that thread is blocked. notice that, if it is waiting on monitor then only. if it is waiting on some other locks like Reentrant, ReadAndWrite.. then it is called in waiting/time-waiting state. this blocked state is specifically for Monitor lock only.
+4. Waiting/Timed-waiting : When thread is put in waiting queue of some object (by obj.wait()) or is explicitly put in Sleep mode by using Sleep method. then it is called in Waiting state. it can be time-waiting or un-timed one. depending on method called like Thread.Sleep(time) is timed waiting, obj.wait() is un-timed waiting. methods which put thread in this state are : wait(), sleep(), join(). not that all three throws `InterruptedException`.
+5. Terminated : When run() method is completed.
+
+***Why do wait, notify and notifyAll are in Object class?***
+
+-> wait(), notify() and notifyAll() are java.lang.Object class methods. this methods are not about threads. they are about object's monitor (lock). when we do :
+
+```
+synchronized(obj) {
+    obj.wait();
+}
+```
+
+we mean that, release the obj's monitor lock and put current thread in obj's waiting set. when we do obj.notify() or obj.notifyAll(), we mean that inform any one/all threads waiting for monitor lock of obj.
+-> notice that, operation is around obj, not around threads.
 
 
+-> `InterruptedException` can occur when thread is in waiting state and due to some reason it gets interrupted. the interruption can be done by some other thread intentionally or it can be done due to some un-expected events in CPU. notice that methods which put thread in waiting mode (wait, sleep, join) all throws `InterruptedException`. 
 
 ### **Thread Methods and Their Explanations**
 

@@ -32,12 +32,12 @@ This means TCP tracks data in terms of **bytes**, not discrete packets.
 - Suppose Total data to send: **1000 bytes**
 - So Sender segments data as Shown below.
 
-|Packet|SEQ|Payload Size|Byte Range|
-|---|---|---|---|
-|1|1|654|1 – 654|
-|2|655|154|655 – 808|
-|3|809|77|809 – 885|
-|4|886|115|886 – 1000|
+| Packet | SEQ | Payload Size | Byte Range |
+| ------ | --- | ------------ | ---------- |
+| 1      | 1   | 654          | 1 – 654    |
+| 2      | 655 | 154          | 655 – 808  |
+| 3      | 809 | 77           | 809 – 885  |
+| 4      | 886 | 115          | 886 – 1000 |
 
 Now, sender sends This segments one by one. but The packet with `SEQ = 809` (77 bytes) is **Not received by receiver**.
 
@@ -75,14 +75,14 @@ Now, sender sends This segments one by one. but The packet with `SEQ = 809` (77 
 
 ***Final Summary***  :
 
-|Stage|SEQ Received|ACK Sent|
-|---|---|---|
-|Packet 1 OK|1 – 654|655|
-|Packet 2 OK|655 – 808|809|
-|Packet 3 **lost**|–|–|
-|Packet 4 arrives early|886 – 1000|**809 (duplicate)**|
-|Fast Retransmit triggered|Retransmit SEQ 809|–|
-|Packet 3 received now|809 – 885|1001|
+| Stage                     | SEQ Received       | ACK Sent            |
+| ------------------------- | ------------------ | ------------------- |
+| Packet 1 OK               | 1 – 654            | 655                 |
+| Packet 2 OK               | 655 – 808          | 809                 |
+| Packet 3 **lost**         | –                  | –                   |
+| Packet 4 arrives early    | 886 – 1000         | **809 (duplicate)** |
+| Fast Retransmit triggered | Retransmit SEQ 809 | –                   |
+| Packet 3 received now     | 809 – 885          | 1001                |
 
 -> suppose there is 1000 bytes of total payload sender has to send. so it sends these segments with SEQ = 1 (payload = 654 bytes), SEQ = 655 (payload = 154 bytes), SEQ = 809 (Payload = 77 bytes), SEQ = 886 (payload = 115).
 
@@ -94,7 +94,7 @@ Receiver receives the packets with SEQ = 1, so it sends the ACK = 655, now it re
 --------------------------------<<<<<<<<<<<>>>>>>>>>>-------------------------
 
 
--> The TCP header is of 20 bytes mostly.
+-> The TCP header is of minimum 20 bytes and maximum 60 bytes. without any Options present, the TCP header size is of 20 bytes only.
 
 -> The **checksum** present in the **TCP header** is used to **detect errors** in the **entire TCP segment**, which includes:
 
@@ -120,3 +120,7 @@ Receiver receives the packets with SEQ = 1, so it sends the ACK = 655, now it re
 -> [TCP header image.](https://share.google/images/vNIU9mJAIdIkZn7UM)
 -> [UDP header image](https://share.google/images/SEd9Sjmp9QuoSkZ6h)
 
+
+-> Read [This article](https://viveksb007.github.io/2025/12/deep-dive-in-tcp-protocol/) to get deep understanding of what are the different TCP options. why they are used.
+
+-> Also try to learn what is MSS, MTU, rwnd, cwnd, TCP slow start.

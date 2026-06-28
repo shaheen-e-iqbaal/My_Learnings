@@ -1,6 +1,7 @@
 
 ->Linux command to see routing table is : ip route show
 
+-> The IP header is of minimum 20 bytes and maximum 60 bytes. without any Options present, the IP header size is of 20 bytes only.
 
 1. **Transport Layer (TCP)**
     - The transport layer **creates a TCP segment** by combining:

@@ -134,6 +134,7 @@ GPT Version:
 
 -> By using UDP, it removes HTTP 2's TCP level HOL blocking problem.
 
+-> HTTP 3 (QUIC) can't work without TLS. so, it's must to have TLS supported by your server. 
 -> It also reduces Connection + TLS roundtrip to 1 from 2-3 RTT required by HTTP 2 for the same functionality. which makes it faster than HTTP 2.
 
 -> As we have shifted the responsibility of reliable communication from OS level to application level (i.e. using UDP + QUIC instead of TCP for reliability), we are now much independent to make any future changes.

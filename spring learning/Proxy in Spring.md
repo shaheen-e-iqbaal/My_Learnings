@@ -1,7 +1,7 @@
 
 => ==During application startup, spring will find all the class whose proxy needs to be created. so spring will create those proxies during application startup only and will store them in IoC. this proxies will be there in IoC during whole application lifecycle.==
 
-=> ==All the Proxy in spring are by default Singleton irrespective of the Scope of the corresponding class. they will be created during application startup no matter what the scope of the corresponding class is. these proxies will figure out the bean creation as per the scope of target bean.==
+=> ==All the Proxy in spring are by default Singleton irrespective of the Scope of the underlying class. they will be created during application startup no matter what the scope of the corresponding class is. these proxies will figure out the bean creation as per the scope of target bean.==
 
 
 When will spring find out that it needs to create a proxy this class? :
@@ -34,7 +34,7 @@ Flow of Spring Boot application start up :
 - Beans are instantiated and dependencies are injected. if proxy of target class is in IoC, it will be injected instead of actual bean.
 
 
-Types of Proxy :
+Types of Proxy : ^f5e730
 
 1. Dynamic JDK proxy : If a class implements one or more interfaces, then spring will by default use this proxy. spring will create a new class, which will also implement the same interfaces implemented by original class and will override methods. 
 ex : 
@@ -68,7 +68,7 @@ public class ActionImplOne implements Action, Extra {
 
 @Component("implTwo")
 @Scope(value = "singleton", proxyMode = ScopedProxyMode.INTERFACES)
-public class ActionImplTwo implements Extra {
+public class ActionImplTwo implements Action {
     public ActionImplTwo() {
         System.out.println("ActionImplTwo instantiated");
     }

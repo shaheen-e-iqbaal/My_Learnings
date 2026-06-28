@@ -118,14 +118,30 @@ public class UserUtility {
 How does @Async works :
 
 -> spring uses a threads from a thread pool to execute a methods marked with this annotation. so these methods runs in a different thread then the caller main thread.
--> spring creates AOP Proxy of a class who has one or more async methods.
+-> spring creates AOP Proxy of a class who has one or more async methods. note that due to this, your async method should be of valid signature so that it can be proxied. refer [[Proxy in Spring#^f5e730]] to learn about proxy.
 
--> Spring boot uses ***ThreadPoolTaskExecutor*** as a thread pool which has fixed (aprox  8) corePoolSize and maxPoolSize, task queue size are equal to `Integer.MAX_VALUE`.
+-> Spring boot uses ***ThreadPoolTaskExecutor*** as a thread pool which has fixed (approx  8) corePoolSize and maxPoolSize, task queue size are equal to `Integer.MAX_VALUE`.
 this thread pool is wrapper around Java's ThreadPoolExecutor. 
 
--> If spring doesn't find a Bean of ThreadPoolTaskExecutor, it uses ***SimpleAsyncTaskExecutor*** as a thread pool, which will create a new thread for each async task.
+***Which Thread Pool's threads will Spring boot use to run Async methods?***
+
+```
+	In Spring Boot, `@Async` methods do **not run on the request thread** (like the one from Apache Tomcat). Instead, they are executed using a separate **Executor (thread pool)** managed by Spring.
+
+	By default, Spring Boot auto-configures a `ThreadPoolTaskExecutor` bean named **`applicationTaskExecutor`**, but only if you have **not defined any custom Executor bean**. This default executor is used for running all `@Async` methods, and its threads usually have names like `task-1`, `task-2`, etc.
+
+	If you create your own Executor bean, Spring Boot will **not create** the default `applicationTaskExecutor`. Now Spring needs to decide which executor to use for `@Async`. It follows a priority-based resolution. First, if you explicitly specify an executor in `@Async("beanName")`, it will use that. If not, it looks for a bean named **`taskExecutor`** and uses it as the default. If there is only one Executor bean in the context, Spring will automatically use that. However, if **multiple Executor beans exist and none is clearly marked as default**, Spring cannot decide which one to use.
+
+	In such ambiguous cases, instead of failing immediately, Spring falls back to using **`SimpleAsyncTaskExecutor`**, which is not a real thread pool. It creates a new thread for every task and does not reuse threads, which can be inefficient and risky under heavy load. You can पहचान this fallback easily because the thread names will look like `simpleAsyncTaskExecutor-1`.
+
+	To avoid confusion and ensure predictable behavior, it is recommended to either define a bean named **`taskExecutor`**, mark one executor as `@Primary`, or explicitly specify the executor in the `@Async` annotation. Also, whenever you create a `ThreadPoolTaskExecutor`, make sure to call `initialize()`; otherwise, it may not work correctly.
+```
+
 
 -> Async methods can have return type as Future or CompletableFuture or void.
--> use @EnableAsync to enable async in spring boot. 
+ 
+ -> ==**use @EnableAsync to enable async in spring boot. without this, @Async functionality won't work.**==
 
 -> How to handle exception thrown by method marked as @Async annotation? refer first part of General note under spring learning folder.
+
+-> Refer [Article](https://dev.to/realnamehidden1_61/how-does-async-work-internally-in-spring-boot-35h5) for @Async internal working info.

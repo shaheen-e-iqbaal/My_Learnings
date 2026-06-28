@@ -1,7 +1,7 @@
 
 -> When you mark any component as @Lazy, spring will not create it's bean until it is required. so, when will it's bean will be required? suppose you have dependency of this component in some other component, then to resolve dependency, spring will create a bean of it, and will inject it. so in this case, lazy will not work.
 
--> If you mark any dependency as @Lazy, spring will always inject a proxy no matter bean of that dependency is available in IoC or not.
+-> If you mark any dependency as @Lazy in Constructor, spring will always inject a proxy no matter bean of that dependency is available in IoC or not.
 ex: 
 @Component
 public class A{
@@ -11,3 +11,5 @@ public class A{
 }
 
 in above example, spring will inject proxy of B not the actual Bean.
+
+-> marking any instance variable with @Lazy won't force spring to inject proxy of it. only marking @Lazy at constructor level (as shown in above code) will force the spring to inject proxy.

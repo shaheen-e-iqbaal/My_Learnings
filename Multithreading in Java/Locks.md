@@ -118,10 +118,18 @@ simillarly you can get and unlock write lock.
 
 -> More than one thread can get read lock which is shared lock. but only one thread at a time can get write lock which is exclusive lock. during write lock, no other thread can have read lock.
 
+-> It is re-entrant lock. the thread holding write lock can acquire read lock. 
+
 -> This lock can be used when you have high number of read operations compared to write operations. like 1/1000 type ratio.
 
 
--------------------<<<<<<<<<<<<<<<<>>>>>>>>>>>--------------------------
+Blocking Queue :
+
+-> There are special queues which are implemented by Java to concurrently perform enque and deque operations on queue. this queue will  be thread safe.
+-> `BlockingQueue` is interface in java which is implemented by `ArrayBlockingQueue`, `LinkedBlockingQueue`.
+
+
+-------------------<<<<<<<<<<<<<<<<>>>>>>>>>>>-------------------------
 
 
 ***==When to Use :==***

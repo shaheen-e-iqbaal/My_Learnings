@@ -161,7 +161,7 @@ public class PrintTask extends RecursiveAction {
 
 1. Executor (Interface) : 
 
-Methods : execute(Runnable r)
+Methods : void execute(Runnable r)
 
 
 2. ExecutorService (Interface) extends Executor :
